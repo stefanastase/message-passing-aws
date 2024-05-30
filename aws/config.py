@@ -17,11 +17,11 @@ response = sqs_client.create_queue(QueueName='metrics-queue')
 metrics_queue_url = response['QueueUrl']
 
 config = {
-    "SNS Topic ARN": topic_arn,
-    "SQS URLs": {
-        "s": small_queue_url,
-        "l": large_queue_url,
-        "metrics": metrics_queue_url
+    "SNS_TOPIC_ARN": topic_arn,
+    "SQS_URLS": {
+        "S": small_queue_url,
+        "L": large_queue_url,
+        "METRICS": metrics_queue_url
     }
 }
 
